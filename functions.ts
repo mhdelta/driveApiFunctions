@@ -19,9 +19,6 @@ class headerComponentFunctions {
 							let dataControlDespacho = response.datos;
 							gapi.load('client:auth2', function () {
 								gapi.client.init({
-									// Estas dos llaves deben cambiarse, estas son las de geminus, debe
-									// utilizarse las de cada empresa y se crean en el cloud console de Google
-									// en la sección de credenciales
 									apiKey: dataControlDespacho.apiKeyGoogle,
 									clientId: dataControlDespacho.clientIdGoogle,
 									discoveryDocs: _this.discovery_docs,
