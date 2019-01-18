@@ -5,9 +5,9 @@ public IGestionContenidoNube ObtenerServicioNube(double? idSitio)
             {
                 if (idSitio != null)
                 {
-                    using (UnitOfWork unitOfWork = new UnitOfWork(idEmpresa))
+                    using (Unit unit = new Unit(idEmpresa))
                     {
-                        var sitio = unitOfWork.SitiosRepository.Items.Where(m => m.Id == idSitio).FirstOrDefault();
+                        var sitio = unit..Items.Where(m => m.Id == idSitio).FirstOrDefault();
                         if (sitio != null)
                         {
                             if (sitio.Descripcion == "Google Drive")
@@ -20,7 +20,7 @@ public IGestionContenidoNube ObtenerServicioNube(double? idSitio)
             }
             catch (Exception ex)
             {
-                throw new Exception("No se obtuvo el servicio en la nube" + Geminus.Utils.UtilGeminusException.GetInnerException(ex));
+                throw new Exception("No se obtuvo el servicio en la nube" + .Utils..GetInnerException(ex));
             }
 
             return servicio;
