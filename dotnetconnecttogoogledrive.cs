@@ -4,11 +4,11 @@
 
             try
             {
-                result.Datos = Geminus.Api.Constants.LanguageTranslator.ALERT_ERROR_SERVER;
+                result.Datos = .Api.Constants.LanguageTranslator.ALERT_ERROR_SERVER;
 
                 if (IsValid())
                 {
-                    using (var unitOfWork = new UnitOfWork(idEmpresa))
+                    using (var unitOfWork = new UnitOfWork())
                     {
                         // If modifying these scopes, delete your previously saved credentials
                         // at ~/.credentials/drive-dotnet-quickstart.json
@@ -48,9 +48,9 @@
             }
             catch (Exception ex)
             {
-                var exception = Geminus.Utils.UtilGeminusException.GetInnerException(ex);
+                var exception = .Utils..GetInnerException(ex);
 
-                result.InfoOperacion = new InfoOperacion(exception, $"{nombreClase}_{nameof(ObtenerPedidosParaProgramar)}");
+                result.InfoOperacion = 
             }
 
             return result;
